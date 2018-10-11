@@ -21,7 +21,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/users', user);
 
-var port = 9000;
+// Set Port
+const port = 9000;
 
 app.listen(port, () => {
   console.log('server:' + port);
