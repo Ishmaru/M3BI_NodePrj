@@ -1,10 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+// devDbUrl local auth for Mongodb
+const devDbUrl = require('./dev_db_url');
 
 //Set up DB
-let dev_db_url = 'mongodb://ElCapitan:Ke72MreJE7nHdBzh@ds257485.mlab.com:57485/m3bi_nodeprj';
-let mongoDB = process.env.MONGODB_URI || dev_db_url;
+let mongoDB = process.env.MONGODB_URI || devDbUrl;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
