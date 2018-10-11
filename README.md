@@ -6,7 +6,7 @@
 `touch dev_db_url.js` and insert following code:
 
 ```javascript
-let devDbUrl = 'mongodb://<username>:<userpassword>@ds257485.mlab.com:57485/m3bi_nodeprj';
+let devDbUrl = 'mongodb://<username>:<password>@ds257485.mlab.com:57485/m3bi_nodeprj';
 
 module.exports = devDbUrl;
 ```
@@ -17,6 +17,7 @@ make requests to these routes:
 GET - localhost:9000/users/
 
 GET - localhost:9000/users/:id
+
 POST - localhost:9000/users/create
 
 PUT - localhost:9000/users/:id/update
