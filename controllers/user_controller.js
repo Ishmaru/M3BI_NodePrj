@@ -21,7 +21,7 @@ exports.user_create = function(req, res, next){
     if(err){
       return next(err);
     }
-    res.send(`user Added ${user.name.first} ${user.name.last}`);
+    res.send(`Added ${user.name.first} ${user.name.last}`);
   })
 }
 exports.user_details = function(req, res) {
