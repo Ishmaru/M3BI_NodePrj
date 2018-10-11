@@ -24,8 +24,8 @@ exports.user_create = function(req, res, next){
     res.send(`Added ${user.name.first} ${user.name.last}`);
   })
 }
-exports.user_details = function(req, res) {
-  User.findById(req.params.id, function(err, user, next){
+exports.user_details = function(req, res, next) {
+  User.findById(req.params.id, function(err, user){
     if (err) {
       return next(err);
     }
