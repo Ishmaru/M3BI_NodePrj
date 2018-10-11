@@ -1,4 +1,5 @@
 const User = require('../models/user_model');
+
 exports.user_index = function(req, res, next){
   User.find({}, function(err, users){
     if (err) {
@@ -21,7 +22,6 @@ exports.user_create = function(req, res, next){
       return next(err);
     }
     res.send(`user Added ${user.name.first} ${user.name.last}`);
-    // res.send('user Added' + user.name.first + ' ' + user.name.last);
   })
 }
 exports.user_details = function(req, res) {
