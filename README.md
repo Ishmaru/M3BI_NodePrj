@@ -1,8 +1,15 @@
 # M3BI
 
-#### To use simply run:
-`npm install`
-then
+#### To use locally simply run:
+`npm install` then add MongoDb user credentials:
+
+`touch dev_db_url.js` and insert following code:
+
+```javascript
+let devDbUrl = 'mongodb://<username>:<userpassword>@ds257485.mlab.com:57485/m3bi_nodeprj';
+
+module.exports = devDbUrl;
+```
 `npm app.js`
 
 make requests to these routes:
